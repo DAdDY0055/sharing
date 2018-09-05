@@ -11,8 +11,12 @@
     <td><%= blog.title %></td>
     <td><%= blog.content %></td>
     <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
+    <% if logged_in? %>
+    <% if blog.user_id == current_user.id %>
     <td><%= link_to "情報を編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td>
     <td><%= link_to '情報を削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <% end %>
+    <% end %>
   </tr>
 <% end %>
 </table>
