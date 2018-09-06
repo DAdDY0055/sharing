@@ -14,6 +14,9 @@
  <%= f.text_field :name %>
 <%= f.label :email %>
  <%= f.email_field :email %>
+ <%= f.label :photo %>
+ <%= f.file_field :icon %>
+ <%= f.hidden_field :icon_cache %>
 <%= f.label :password %>
  <%= f.password_field :password %>
 <%= f.label :password_confirmation %>
