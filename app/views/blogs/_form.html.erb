@@ -20,7 +20,17 @@
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
-  <input type="submit" name="commit" value="登録" data-disable-with="Create Blog">
+
+  <div class="field">
+        <%= form.label :image %>
+        <%= image_tag(@blog.image.url) if @blog.image.url %>
+        <%= form.file_field :image, id: :feed_image %>
+  </div>
+
+
+  <div class="actions">
+        <%= form.submit %>
+  </div>
 <% end %>
 
 <%= link_to "一覧画面にもどる", blogs_path %>
