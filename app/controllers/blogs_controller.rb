@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :user_approval
 
 
   def index
@@ -64,5 +65,11 @@ class BlogsController < ApplicationController
 
   def set_user
     redirect_to  blogs_path unless current_user.id == @blog.user_id
+  end
+
+  def user_approval
+    unless current_user && current_user.approval == true
+      redirect_to root_path
+    end
   end
 end

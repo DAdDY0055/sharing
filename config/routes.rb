@@ -7,6 +7,13 @@ resources :blogs do
       post :confirm
     end
   end
+
+resources :users do
+  collection do
+    get :check
+  end
+end
+
  resources :sessions, only: [:new, :create, :destroy]
- resources :users, only: [:new, :create, :show]
+ resources :users, only: [:new, :create, :show, :index]
 end

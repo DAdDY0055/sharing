@@ -1,0 +1,4 @@
+<% @users.each do |user| %>
+  <td><%= user.name %></td>
+  <%= link_to 'チェック',  controller: "users", action: "check", user_id: user.id %>
+<% end %>

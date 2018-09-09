@@ -3,9 +3,20 @@ class UsersController < ApplicationController
    @user = User.new
  end
 
+ def index
+   @users = User.all
+ end
+
+ def check
+   @user = User.find(params[:user_id])
+   @user.approval = true
+   @user.save(validate: false)
+   redirect_to user_path(@user.id)
+ end
  def create
    @user = User.new(user_params)
    if @user.save
+
      redirect_to user_path(@user.id)
    else
      render 'new'
