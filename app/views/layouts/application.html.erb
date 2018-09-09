@@ -6,6 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css"/> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <meta name="viewport" content="width=device-width">
+
   </head>
 
   <body>
@@ -20,5 +27,21 @@
      <%= link_to "Login", new_session_path %>
    <% end %>
    <%= yield %>
+
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <!-- <script type="text/javascript" src="/assets/slick/slick.min.js"></script> -->
+   <script type="text/javascript">
+
+   $('.top').slick({
+     autoplay: true,
+     autoplayspeed: 10000,
+     slidesToShow: 1
+   });
+
+   </script>
+
+
   </body>
 </html>
