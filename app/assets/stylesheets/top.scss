@@ -117,11 +117,11 @@ th {
   text-align: center;
 
 }
-td {
-  width: 100%;
-  text-align: center;
-
-}
+// td {
+//   width: 100%;
+//   text-align: center;
+//
+// }
 div.col-md-3.col-xs-12{
   text-align: center;
   margin-top: 40px;
@@ -138,9 +138,56 @@ input#feed_image {
     margin: 0 auto;
     background-color: #808080;
 }
-h2{
-  color: white;
+// h2{
+//   color: white;
+// }
+// label{
+//   color: white;
+// }
+.container-fluid{
+  text-align: center;
 }
-label{
-  color: white;
+
+
+
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.header{
+  background-color: #BBFFFF;
+}
+
+.footer{
+  background-color: #BBFFFF;
 }

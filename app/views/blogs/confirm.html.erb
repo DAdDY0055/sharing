@@ -1,18 +1,20 @@
+<div class="container-fluid">
 <h3>以下の内容で、送信する。</h3>
 
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :content %>
-  <%= form.hidden_field :image_cache %>
+  <p><%= form.hidden_field :title %></p>
+  <p><%= form.hidden_field :content %></p>
+  <p><%= form.hidden_field :image_cache %></p>
 
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
-  <%= image_tag(@blog.image.url) %>
-  <%= form.submit  "登録する" %>
+  <p><%= image_tag(@blog.image.url) %></p>
+  <p><%= form.submit  "登録する" %></p>
 <% end %>
 
 <%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
-  <%= form.hidden_field :title %>
-  <%= form.hidden_field :content %>
-  <%= form.submit "もどる", name: 'back' %>
+  <p><%= form.hidden_field :title %></p>
+  <p><%= form.hidden_field :content %></p>
+  <p><%= form.submit "もどる", name: 'back' %></p>
 <% end %>
+</div>

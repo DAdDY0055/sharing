@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <%= form_with(model: @blog, local: true ,url: choose_new_or_edit ) do |form| %>
 
   <% if @blog.errors.any? %>
@@ -13,18 +14,18 @@
   <% end %>
 
   <div class="blog_title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <p><%= form.label :title %></p>
+    <p><%= form.text_field :title %></p>
   </div>
   <div class="blog_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+  <p><%= form.label :content %></p>
+    <p><%= form.text_field :content %></p>
   </div>
 
   <div class="field">
-        <%= form.label :image %>
-        <%= image_tag(@blog.image.url) if @blog.image.url %>
-        <%= form.file_field :image, id: :feed_image %>
+        <p><%= form.label :image %></p>
+        <p><%= image_tag(@blog.image.url) if @blog.image.url %></p>
+        <p><%= form.file_field :image, id: :feed_image %></p>
   </div>
 
 
@@ -34,3 +35,4 @@
 <% end %>
 
 <%= link_to "一覧画面にもどる", blogs_path %>
+</div>

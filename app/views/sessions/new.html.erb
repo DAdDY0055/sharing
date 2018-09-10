@@ -1,8 +1,10 @@
+<div class="container-fluid">
 <h1>Log in</h1>
 <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
-<%= f.label :email %>
- <%= f.email_field :email %>
-<%= f.label :password %>
- <%= f.password_field :password %>
+<p><%= f.label :email %></p>
+ <P><%= f.email_field :email %></P>
+<p><%= f.label :password %></p>
+ <p><%= f.password_field :password %></p>
 <%= f.submit "Log in" %>
 <% end %>
+</div>
