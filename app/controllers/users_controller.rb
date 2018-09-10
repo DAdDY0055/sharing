@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
  def index
    @users = User.all
+   @blogs = Blog.page(params[:page]).per(5)
+
  end
 
  def check

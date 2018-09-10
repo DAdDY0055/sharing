@@ -1,4 +1,12 @@
+
+
 <% @users.each do |user| %>
-  <td><%= user.name %></td>
-  <%= link_to 'チェック',  controller: "users", action: "check", user_id: user.id %>
+  <ul><%= user.name %></ul>
+<% if  user.approval == true %>
+     <ul>ture</ul>
+<%  else %>
+     <ul>false</ul>
 <% end %>
+  <ul><%= link_to 'チェック',  controller: "users", action: "check", user_id: user.id %></ul>
+<% end %>
+<%= paginate @blogs %>
