@@ -1,12 +1,23 @@
 
 
 <% @users.each do |user| %>
-  <ul><%= user.name %></ul>
+<table>
+<tr>
+      <th>ユーザー名</th>
+  <th><%= user.name %></th>
+</tr>
+<tr>
+      <th>認証状態</th>
 <% if  user.approval == true %>
-     <ul>ture</ul>
+     <th>ture</th>
 <%  else %>
-     <ul>false</ul>
+     <th>false</th>
 <% end %>
-  <ul><%= link_to 'チェック',  controller: "users", action: "check", user_id: user.id %></ul>
+</tr>
+<tr>
+  <th>認証</th>
+  <th><button><%= link_to 'チェック',  controller: "users", action: "check", user_id: user.id %></button></th>
+</tr>
+</table>
 <% end %>
 <%= paginate @blogs %>
