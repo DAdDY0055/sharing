@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
  def new
    @user = User.new
  end
@@ -41,7 +42,14 @@ class UsersController < ApplicationController
 
  private
 
+ def set_user
+      @user = User.find(params[:id])
+      redirect_to root_path unless @user == current_user
+ end
+
  def user_params
    params.require(:user).permit(:name, :email, :password, :password_confirmation, :icon, :icon_cache)
  end
+
+
 end
