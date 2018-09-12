@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
 
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.page(params[:page]).per(5).order("id DESC")
   end
 
   def show
