@@ -1,8 +1,8 @@
 class Blog < ApplicationRecord
   mount_uploader :image, ImageUploader
 
-  validates :title, presence: true
-  validates :content,length: { in: 1..140 }
+  validates :title, presence: true,length: { in: 1..15 }
+  # validates :content,length: { in: 1..140 }
 
 
   has_many :favorites, dependent: :destroy
