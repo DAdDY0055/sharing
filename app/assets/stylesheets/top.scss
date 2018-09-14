@@ -157,10 +157,10 @@ input#feed_image {
 
 
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+// html {
+//   position: relative;
+//   min-height: 100%;
+// }
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
@@ -194,4 +194,25 @@ body {
 
 .footer{
   background-color: #BBFFFF;
+}
+
+@media (min-width: 1226px) {
+  .text_area textarea {
+      width: 800px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 1225px) {
+  .text_area textarea {
+      width: 800px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .text_area textarea {
+      width: 250px;
+      height: 100px;
+  }
 }
