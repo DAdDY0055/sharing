@@ -16,16 +16,27 @@ p{
   padding-top: 10px;
 }
 
-.box13 {
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    color: #FFF;
-    background: #6eb7ff;
-    border-bottom: solid 6px #3f87ce;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
+.box13{
+    width: 100%;
+    float: left;
+    padding: 0.2em 0.5em;
+    margin: 1em 0;
+    background: #d6ebff;
+    box-shadow: 0px 0px 0px 10px #d6ebff;
+    border: dashed 2px white;
 }
 // .box13 p {
 //     margin: 0;
 //     padding: 0;
 // }
+.companyname{
+  text-align: left;
+  width: 30%;
+}
+.detail{
+  text-align: left;
+  width: 60%;
+}
+.button{
+  width: 10%;
+}

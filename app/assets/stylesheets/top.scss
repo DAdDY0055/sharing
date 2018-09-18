@@ -199,14 +199,14 @@ body {
 @media (min-width: 1226px) {
   .text_area textarea {
       width: 800px;
-      height: 400px;
+      height: 50px;
   }
 }
 
 @media (max-width: 1225px) {
   .text_area textarea {
       width: 800px;
-      height: 400px;
+      height: 50px;
   }
 }
 
@@ -216,3 +216,44 @@ body {
       height: 100px;
   }
 }
+
+@media (min-width: 1226px) {
+  .company {
+      width: 400px;
+      height: 50px;
+  }
+}
+
+@media (max-width: 1225px) {
+  .company {
+      width: 400px;
+      height: 50px;
+  }
+}
+  @media (max-width: 420px) {
+    .company {
+        width: 250px;
+        height: 50px;
+    }
+  }
+
+  @media (min-width: 1226px) {
+    .url {
+        width: 800px;
+        height: 50px;
+    }
+  }
+
+  @media (max-width: 1225px) {
+    .url {
+        width: 800px;
+        height: 50px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .url {
+        width: 250px;
+        height: 100px;
+    }
+  }

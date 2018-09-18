@@ -1,6 +1,6 @@
 <h1>詳細画面</h1>
-<p>タイトル: <%= @blog.title %></p>
-<p>内容: <%= @blog.content %></p>
+<p> 企業名 <%= @blog.title %></p>
+<p> 事業内容 <%= @blog.content %></p>
 <% unless @blog.user_id == current_user.id %>
   <% if @favorite.present? %>
     <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>

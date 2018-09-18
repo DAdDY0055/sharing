@@ -15,14 +15,20 @@
   <% end %>
 
   <div class="blog_title">
-    <p><%= form.label :title %></p>
-    <p><%= form.text_field :title %></p>
+    <p><%= form.label :企業名 %></p>
+    <p><%= form.text_field :title, :class => 'company' %></p>
   </div>
+
   <div class="blog_title">
-  <p><%= form.label :content %></p>
+  <p><%= form.label :事業内容 %></p>
   <div class="text_area">
     <p><%= form.text_area :content %></p>
   </div>
+  </div>
+
+  <div class="blog_url">
+    <p><%= form.label :Url %></p>
+    <p><%= form.text_field :url, :class => 'url' %></p>
   </div>
 
   <div class="field">

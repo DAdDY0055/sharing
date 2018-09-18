@@ -5,7 +5,8 @@ class BlogsController < ApplicationController
 
 
   def index
-    @blogs = Blog.page(params[:page]).per(5).order("id DESC")
+    @blogs = Blog.page(params[:page]).per(10).order("id DESC")
+    1
   end
 
   def show
@@ -57,7 +58,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :content,:image, :image_cache)
+    params.require(:blog).permit(:title, :content,:image, :image_cache, :url)
   end
 
   def set_blog
