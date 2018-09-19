@@ -7,7 +7,7 @@ class UsersController < ApplicationController
  def index
    @users = User.all
    @blogs = Blog.page(params[:page]).per(5)
-   if  @users.find(12) == current_user
+   if  @users.find(1) == current_user
    else
      redirect_to root_path
    end
