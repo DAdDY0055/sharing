@@ -5,10 +5,11 @@
   <p><%= form.hidden_field :title %></p>
   <p><%= form.hidden_field :content %></p>
   <p><%= form.hidden_field :image_cache %></p>
-
+  <p><%= form.hidden_field :url %></p>
   <p>企業名<%= @blog.title %></p>
   <p>事業内容<%= @blog.content %></p>
   <p><%= image_tag(@blog.image.url) %></p>
+  <p>URL<%= @blog.url %></p>
   <p><%= form.submit  "登録する" %></p>
 <% end %>
 
