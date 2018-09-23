@@ -1,7 +1,7 @@
 <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
     <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></p>
-    <p><%= blog.message_time %></p>
+    <p><%= comment.message_time %></p>
     <p>コメント：<%= comment.content %></p>
     <% if comment.user == current_user %>
       <p><%= link_to 'コメントを削除する', blog_comment_path(comment.blog_id, comment.id), method: :delete, remote: true %></p>

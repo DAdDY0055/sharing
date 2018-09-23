@@ -9,7 +9,7 @@ class Blog < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :favorite_users, through: :favorites, source: :user
   belongs_to :user
-  def message_time
-   created_at.strftime("%m/%d/%y at %l:%M %p")
-  end
+  # def message_time
+  #  created_at.strftime("%m/%d/%y at %l:%M %p")
+  # end
 end
