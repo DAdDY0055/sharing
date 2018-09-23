@@ -5,7 +5,7 @@ class Blog < ApplicationRecord
   # validates :content,length: { in: 1..140 }
   validates :url, format: /\A#{URI::regexp(%w(http https))}\z/
 
-
+  has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorite_users, through: :favorites, source: :user
   belongs_to :user

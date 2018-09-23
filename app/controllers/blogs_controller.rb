@@ -5,13 +5,25 @@ class BlogsController < ApplicationController
 
 
   def index
-    @blogs = Blog.page(params[:page]).per(10).order("id DESC")
-    1
+    @blogs = Blog.page(params[:page]).per(100).order("id DESC")
+    # @count = Comment.where(blog.id:@blog.id).count
+    # @user = User.find(1).id
+    # @blog = Blog.all
+    # # @favorite = current_user.favorites.find_by(blog_id: @blog.id)
+    # @comments = @blog.comments
+    # @comment = @blog.comments.build
+    # @comment = Comment.new
+
+
+
   end
 
   def show
     @blog = Blog.find(params[:id])
     @favorite = current_user.favorites.find_by(blog_id: @blog.id)
+    @comments = @blog.comments
+    @comment = @blog.comments.build
+    @comment = Comment.new
   end
 
   def new

@@ -10,8 +10,13 @@
 <% @blogs.each do |blog| %>
 <div class="box13">
 <table >
-
-  <tr>
+<tr>
+  <td><% if blog.user_id == 1 %>
+      <%= image_tag('diverp.png', class: "logo") %>
+      <% else %>
+      <%= image_tag('new.jpg', class: "logo") %>
+      <% end %>
+  </td>
     <td class= "companyname"><%= blog.title %></td>
 
     <td class="detail"><div class="width"><p class="center"><%= blog.content %></p></div></td>
@@ -26,7 +31,9 @@
     <% end %>
 </div>
     <% end %>
-    <!-- <td><%= blog.message_time %></td> -->
+    <td><p><%= blog.comments.size %>件</p>
+
+    <td><%#= blog.message_time %></td>
   </tr>
 
 </table>

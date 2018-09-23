@@ -8,14 +8,31 @@
     <%= link_to 'お気に入りする', favorites_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
   <% end %>
 <% end %>
-<%= link_to "一覧画面にもどる", blogs_path %>
+<!-- <%= link_to "一覧画面にもどる", blogs_path %> -->
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="blog-text">
+  </div>
+  <p>コメント</p>
+  <div id="comments_area">
+  <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog } %>
+  </div>
+  <!-- コメント入力欄をブログの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, blog: @blog } %>
+</div>
+
+
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Image:</strong>
   <%= image_tag @blog.image_url %>
-</p>
+</p> -->
 <% if @blog.user_id == current_user.id %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <% end %>
