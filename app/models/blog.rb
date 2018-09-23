@@ -3,7 +3,7 @@ class Blog < ApplicationRecord
 
   validates :title, presence: true,length: { in: 1..15 }
   # validates :content,length: { in: 1..140 }
-  validates :url, format: /\A#{URI::regexp(%w(http https))}\z/
+  # validates :url, format: /\A#{URI::regexp(%w(http https))}\z/
 
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
